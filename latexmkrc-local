@@ -1,0 +1,16 @@
+# Latexmkrc for LOCAL compilation (not Overleaf)
+# This keeps auxiliary files in a build/ subdirectory
+
+$pdf_mode = 1;        # Use pdflatex
+$bibtex_use = 1;      # Use bibtex8 for bibliography
+$pdflatex = 'pdflatex -interaction=nonstopmode -synctex=1 %O %S';
+
+# Move auxiliary files to build/ subdirectory
+$aux_dir = 'build';
+$out_dir = '.';       # Keep PDF in root
+
+# Ensure build directory exists
+system('mkdir -p build');
+
+# Clean up auxiliary files
+$clean_ext = 'bbl nav out snm synctex.gz run.xml bcf';

@@ -1,0 +1,6 @@
+# Overleaf latexmkrc configuration
+# This file tells Overleaf to use biber for bibliography processing
+
+$pdf_mode = 1;        # Use pdflatex
+$biber = 'biber %O %S';
+$bibtex_use = 2;      # Use biber instead of bibtex
