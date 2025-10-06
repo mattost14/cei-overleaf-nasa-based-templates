@@ -3,3 +3,4 @@
 
 $pdf_mode = 1;        # Use pdflatex
 $bibtex_use = 1;      # Use bibtex
+$bibtex = 'bibtex %O %S';

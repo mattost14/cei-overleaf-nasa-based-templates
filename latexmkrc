@@ -3,6 +3,7 @@
 
 $pdf_mode = 1;        # Use pdflatex
 $bibtex_use = 1;      # Use bibtex
+$bibtex = 'bibtex %O %S';
 $pdflatex = 'pdflatex -interaction=nonstopmode -synctex=1 %O %S';
 
 # Move auxiliary files to build/ subdirectory (keeps root clean)
