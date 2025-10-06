@@ -2,7 +2,7 @@
 # This ensures proper compilation on Overleaf
 
 $pdf_mode = 1;        # Use pdflatex
-$bibtex_use = 2;      # Use biber for bibliography
+$bibtex_use = 1;      # Use bibtex
 $pdflatex = 'pdflatex -interaction=nonstopmode -synctex=1 %O %S';
 
 # Move auxiliary files to build/ subdirectory (keeps root clean)

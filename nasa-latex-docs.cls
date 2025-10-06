@@ -656,7 +656,7 @@
 
 \ifdefstring{\class@template}{none}{
    % Do nothing, no template provided - just load the biblatex package to avoid errors
-   \RequirePackage[backend=bibtex8, giveninits=true, natbib=true, style=aiaa, autocite=inline, bibwarn=false]{biblatex}
+   \RequirePackage[backend=bibtex, giveninits=true, natbib=true, style=aiaa, autocite=inline, bibwarn=false]{biblatex}
 }{
    \ifdefstring{\class@template}{standalone}{
       % No template for standalone but change some necessary settings to avoid warnings
