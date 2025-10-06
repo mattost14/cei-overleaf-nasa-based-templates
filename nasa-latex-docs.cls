@@ -656,14 +656,27 @@
 
 \ifdefstring{\class@template}{none}{
    % Do nothing, no template provided - just load the biblatex package to avoid errors
-   \RequirePackage[backend=bibtex, giveninits=true, natbib=true, style=aiaa, autocite=inline, bibwarn=false]{biblatex}
+   \RequirePackage[backend=bibtex, giveninits=true, natbib=true, style=numeric-comp, autocite=inline, bibwarn=false]{biblatex}
+   % Load AIAA bibliography style
+   \input{aiaa.bbx}
+   \input{aiaa.cbx}
 }{
    \ifdefstring{\class@template}{standalone}{
       % No template for standalone but change some necessary settings to avoid warnings
       \captionsetup{hypcap=false}
    }{
       % Load the user define template file
-      \input{templates/tech/template-\class@template.tex}
+      \ifdefstring{\class@template}{aiaa-conference}{
+         \input{templates/aiaa/template-aiaa-conference.tex}
+      }{
+      \ifdefstring{\class@template}{aiaa-journal}{
+         \input{templates/aiaa/template-aiaa-journal.tex}
+      }{
+      \ifdefstring{\class@template}{aiaa-submission}{
+         \input{templates/aiaa/template-aiaa-submission.tex}
+      }{
+         \input{templates/tech/template-\class@template.tex}
+      }}}
    }
 }
 

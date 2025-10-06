@@ -4,12 +4,16 @@
 
 % Define the options for bibliography and load biblatex package
 \RequirePackage[
-   backend     = bibtex, 
-   giveninits  = true, 
-   natbib      = true, 
-   style       = aiaa, 
-   autocite    = inline, 
+   backend     = bibtex,
+   giveninits  = true,
+   natbib      = true,
+   style       = numeric-comp,
+   autocite    = inline,
    bibwarn     = false]{biblatex}
+
+% Load AIAA bibliography style
+\input{aiaa.bbx}
+\input{aiaa.cbx}
 
 % Allows cite command to control autocite
 \let\cite\autocite
